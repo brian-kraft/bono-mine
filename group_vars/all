@@ -1,0 +1,11 @@
+---
+sys: "{{ system | default('dev') }}"
+rel: "{{ release | default('r00') }}"
+loc: "{{ location | default('CL99') }}"
+flavor: "{{rsflavor | default('performance1-1') }}"
+image: "{{rsimageid |default ('6595f1b7-e825-4bd2-addc-c7b1c803a37f') }}"
+name: "{{sys}}-{{rel}}-{{region}}-{{loc}}-{{cstype}}%02d"
+state: "{{ mystate | default('present') }}"
+hostgroup: " {{ host_group }} | default('rackspace') }} "
+region: IAD
+credentials: ~/.rackspace_cloud_credentials
